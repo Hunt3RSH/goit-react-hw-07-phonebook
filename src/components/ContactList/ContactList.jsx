@@ -21,7 +21,7 @@ export default function ContactList() {
   );
 
   return (
-    <section>
+    <section className="mb-3">
       <Filter />
       <StyledContainer>
         <ListContainer>

@@ -59,7 +59,7 @@ const ContactForm = () => {
 
   return (
     <section>
-      <StyledContainer>
+      <StyledContainer className="mb-3">
         <ToastContainer />
         <StyledForm onSubmit={handleFormSubmit}>
           <Title>Add new Contacts</Title>

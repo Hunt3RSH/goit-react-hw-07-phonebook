@@ -10,7 +10,7 @@ const Filter = () => {
   const filter = useSelector(getFilter);
 
   return (
-    <StyledContainer>
+    <StyledContainer className="mb-4">
       <FilterLabel>
         Find contacts by name
         <Form.Control

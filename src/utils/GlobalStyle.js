@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e7ecf2;
+  background-color: black;
 }
 ul {
     list-style: none;
@@ -35,5 +35,27 @@ p {
   transform: translate(-50%, -50%);
   position: fixed;
   z-index: 1101;
+}
+.animated_background {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.animated_background > video {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1920px;
+}
+@media (min-width: 1920px) {
+  .animated_background > video {
+    width: 100%;
+  }
 }
 `;

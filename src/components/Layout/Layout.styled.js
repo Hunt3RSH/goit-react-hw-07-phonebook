@@ -6,6 +6,7 @@ export const NavListLink = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
+  padding: 15px 5px;
   &:hover,
   &:focus {
     color: red;

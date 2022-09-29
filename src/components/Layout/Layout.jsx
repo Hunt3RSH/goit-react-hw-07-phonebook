@@ -26,7 +26,7 @@ export const Layout = () => {
       >
         <Navbar key={expand} expand={expand} className="mb-3">
           <StyledContainer>
-            <Navbar.Brand href="./goit-react-hw-06-phonebook">
+            <Navbar.Brand href="./goit-react-hw-07-phonebook">
               <img src={LogoBook} alt="Logo" width={120} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
