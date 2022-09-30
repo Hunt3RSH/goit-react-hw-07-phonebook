@@ -65,6 +65,16 @@ p {
   transform: translate(-50%, -50%);
   position: fixed;
   z-index: 1101;
+}
+.lockBody {
+  overflow: hidden;
+}
+
+.centerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
+
 `;

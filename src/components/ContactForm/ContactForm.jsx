@@ -1,13 +1,8 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { Button, Form } from 'react-bootstrap';
-import {
-  StyledContainer,
-  StyledForm,
-  StyledGroup,
-  StyledLabel,
-} from './ContactForm.styled';
+import { Button, Col, Form } from 'react-bootstrap';
+import { StyledForm, StyledGroup, StyledLabel } from './ContactForm.styled';
 import { getContacts } from 'redux/contacts/selectors';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -57,46 +52,44 @@ const ContactForm = () => {
   };
 
   return (
-    <section>
-      <StyledContainer className="mb-3">
-        <ToastContainer />
-        <StyledForm onSubmit={handleFormSubmit}>
-          <Title>Add new Contacts</Title>
-          <StyledGroup>
-            <StyledLabel>
-              Name
-              <Form.Control
-                type="text"
-                name="name"
-                value={name}
-                pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-                onChange={handleInputChange}
-                required
-                placeholder="Enter name"
-              />
-            </StyledLabel>
-          </StyledGroup>
-          <StyledGroup>
-            <StyledLabel>
-              Number
-              <Form.Control
-                type="tel"
-                name="number"
-                value={number}
-                pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-                onChange={handleInputChange}
-                required
-                placeholder="Enter number"
-              />
-            </StyledLabel>
-          </StyledGroup>
+    <Col sm={true} className="centerItem">
+      <ToastContainer />
+      <StyledForm onSubmit={handleFormSubmit}>
+        <Title>Add new Contacts</Title>
+        <StyledGroup>
+          <StyledLabel>
+            Name
+            <Form.Control
+              type="text"
+              name="name"
+              value={name}
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              onChange={handleInputChange}
+              required
+              placeholder="Enter name"
+            />
+          </StyledLabel>
+        </StyledGroup>
+        <StyledGroup>
+          <StyledLabel>
+            Number
+            <Form.Control
+              type="tel"
+              name="number"
+              value={number}
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+              onChange={handleInputChange}
+              required
+              placeholder="Enter number"
+            />
+          </StyledLabel>
+        </StyledGroup>
 
-          <Button type="submit">Add contact</Button>
-        </StyledForm>
-      </StyledContainer>
-    </section>
+        <Button type="submit">Add contact</Button>
+      </StyledForm>
+    </Col>
   );
 };
 

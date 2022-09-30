@@ -4,7 +4,7 @@ import { Copy, CopyWrapper, FooterStyle } from './Footer.styled';
 const Footer = () => {
   return (
     <FooterStyle>
-      <StyledContainer>
+      <StyledContainer className="centerItem">
         <CopyWrapper>
           © 2022 created by
           <Copy href="https://github.com/Hunt3RSH" target="_blank">

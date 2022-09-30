@@ -2,16 +2,13 @@ import { Container, Form } from 'react-bootstrap';
 import styled from 'styled-components';
 
 export const StyledForm = styled(Form)`
-  width: 450px;
-  padding: 15px 0;
+  margin-bottom: 40px;
 `;
 
 export const StyledContainer = styled(Container)`
   background-color: white;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  max-width: 960px;
+  max-width: 1200px;
   padding: 10px 15px;
 `;
 

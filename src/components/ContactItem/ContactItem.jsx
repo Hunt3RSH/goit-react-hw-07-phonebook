@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Button } from 'react-bootstrap';
 import Avatar from 'react-avatar';
 import { TableName } from 'components/ContactList/ContactList.styled';
 import { deleteContacts } from 'redux/contacts/Operations';
+import Button from '@mui/material/Button';
 
 export default function ContactItem({ id, name, number, index }) {
   const dispatch = useDispatch();
@@ -26,7 +26,12 @@ export default function ContactItem({ id, name, number, index }) {
       </td>
       <td>
         <TableName>
-          <Button type="submit" onClick={() => dispatch(deleteContacts(id))}>
+          <Button
+            variant="outlined"
+            color="error"
+            type="submit"
+            onClick={() => dispatch(deleteContacts(id))}
+          >
             Delete
           </Button>
         </TableName>
