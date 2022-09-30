@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
-import { removeContacts } from 'redux/contacts/slice';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import Avatar from 'react-avatar';
 import { TableName } from 'components/ContactList/ContactList.styled';
+import { deleteContacts } from 'redux/contacts/Operations';
 
 export default function ContactItem({ id, name, number, index }) {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ export default function ContactItem({ id, name, number, index }) {
       </td>
       <td>
         <TableName>
-          <Button type="submit" onClick={() => dispatch(removeContacts(id))}>
+          <Button type="submit" onClick={() => dispatch(deleteContacts(id))}>
             Delete
           </Button>
         </TableName>

@@ -8,16 +8,15 @@ import {
   StyledGroup,
   StyledLabel,
 } from './ContactForm.styled';
-import { addContacts } from 'redux/contacts/slice';
 import { getContacts } from 'redux/contacts/selectors';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Title } from 'components/ContactList/ContactList.styled';
+import { addContacts } from 'redux/contacts/Operations';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
   const handleFormSubmit = e => {
