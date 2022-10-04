@@ -12,13 +12,12 @@ import {
   TableName,
   Title,
 } from './ContactList.styled';
-
 export default function ContactList() {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
   const [page, setPage] = useState(1);
   const [curPage, setCurPage] = useState(1);
-
+  console.log(contacts);
   const onPageChange = (_, currentPage) => {
     setCurPage(currentPage);
   };
